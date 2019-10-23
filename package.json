@@ -1,0 +1,28 @@
+{
+  "name": "li-ying",
+  "version": "1.0.0",
+  "description": "li-ying kindergarden",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lv1codeman/Li-Ying.git"
+  },
+  "keywords": [
+    "Li-Ying",
+    "kindergargen",
+    "Fengyuan"
+  ],
+  "author": "Paul",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lv1codeman/Li-Ying/issues"
+  },
+  "homepage": "https://github.com/lv1codeman/Li-Ying#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1"
+  }
+}
