@@ -23,6 +23,7 @@
   "homepage": "https://github.com/lv1codeman/Li-Ying#readme",
   "dependencies": {
     "bootstrap": "^4.3.1",
+    "hover.css": "^2.3.2",
     "jquery": "^3.4.1"
   }
 }
