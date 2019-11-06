@@ -14,6 +14,39 @@ body {
     border: 1px solid red;
 }
 
+.setbg1 {
+    background-color: #fcba03;
+    height: 500px;
+}
+
+pre {
+    font-family: 'GenJyuuGothic-Monospace-Regular';
+    white-space: pre-wrap;
+}
+
+.setbg2 {
+    background-color: #4ba1db;
+    height: 500px;
+}
+
+.about_us {
+    background-color: #fcba03;
+}
+
+.about_us_title {
+    font-family: 'GenJyuuGothic-Monospace-Regular';
+    font-size: 2rem;
+    text-align: center;
+    padding: 20px 0 20px 0;
+}
+
+.about_us_article {
+    font-size: 1.5rem;
+    padding: 20px 10px 20px 10px;
+    text-align: justify;
+    text-justify: inter-ideograph;
+}
+
 .flex-container {
     display: flex;
     flex-direction: row;
