@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="css/mycss.css">
     <link rel="stylesheet" type="text/css" href="css/page2.css">
     <link rel="stylesheet" type="text/css" href="css/hover.css">
+    <link rel="stylesheet" type="text/css" href="css/table.css">
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
     <!-- js -->
@@ -39,8 +40,9 @@
                         var src = request.responseText;
                         var res = src.split('\n');
                         console.log("共有" + res.length + "筆資料");
-                        for (var i = 0; i < res.length; i++) {
-                            $('#tab02listgroup').append("<a href='#' class='list-group-item list-group-item-action'>" + res[i] + "</a>");
+                        for (var i = 0; i < res.length; i = i + 4) {
+                            if (res[i].length != 0)
+                                $('#tbody01').append("<tr><td><strong>" + res[i] + "</strong></td><td>" + res[i + 1] + "</td><td>" + res[i + 2] + "</td></tr>");
                         }
                     }
                 }
@@ -94,8 +96,18 @@
             </ul>
         </div>
         <div id="tab01" class="tab-contents">
-            <div id="tab01listgroup" class="list-group">
-            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>主題</th>
+                        <th>發布日期</th>
+                        <th>發布者</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody01">
+
+                </tbody>
+            </table>
         </div>
         <div id="tab02" class="tab-contents">
             <div id="tab02listgroup" class="list-group">
