@@ -26,31 +26,91 @@
     <script>
         $(function () {
 
-            var outer_text = getText();
-            outer_text = outer_text.split('\n');
-
-            $('#output').text(outer_text);
-        });
-
-        function getText() {
-            // read text from URL location
+            /* 確保讀取到資料後才塞值到output */
             var request = new XMLHttpRequest();
-            request.open('GET', 'http://www.puzzlers.org/pub/wordlists/pocket.txt', true);
+            request.open('GET', 'https://lv1codeman.github.io/Li-Ying/text.txt', true);
             request.send(null);
             request.onreadystatechange = function () {
                 if (request.readyState === 4 && request.status === 200) {
                     var type = request.getResponseHeader('Content-Type');
                     if (type.indexOf("text") !== 1) {
-                        return request.responseText;
+                        $('#output').text(request.responseText);
+                        var src = request.responseText;
+                        var res = src.split('\n');
+
+                        $('#tab02listgroup').append("<a href='#' class='list-group-item list-group-item-action'>" + res[0] + "</a>");
+                        $('#tab02listgroup').append("<a href='#' class='list-group-item list-group-item-action'>" + res[1] + "</a>");
+                        $('#tab02listgroup').append("<a href='#' class='list-group-item list-group-item-action'>" + res[2] + "</a>");
+                        $('#tab02listgroup').append("<a href='#' class='list-group-item list-group-item-action'>" + res[3] + "</a>");
                     }
                 }
             }
-        }
+
+            //tab function
+            var $tabButtonItem = $('#tab-button li'),
+                $tabSelect = $('#tab-select'),
+                $tabContents = $('.tab-contents'),
+                activeClass = 'is-active';
+
+            $tabButtonItem.first().addClass(activeClass);
+            $tabContents.not(':first').hide();
+
+            $tabButtonItem.find('a').on('click', function (e) {
+                var target = $(this).attr('href');
+
+                $tabButtonItem.removeClass(activeClass);
+                $(this).parent().addClass(activeClass);
+                $tabSelect.val(target);
+                $tabContents.hide();
+                $(target).show();
+                e.preventDefault();
+            });
+
+            $tabSelect.on('change', function () {
+                var target = $(this).val(),
+                    targetSelectNum = $(this).prop('selectedIndex');
+
+                $tabButtonItem.removeClass(activeClass);
+                $tabButtonItem.eq(targetSelectNum).addClass(activeClass);
+                $tabContents.hide();
+                $(target).show();
+            });
+
+        });
     </script>
 </head>
 
 <body>
-    <div id="output"></div>>
+    <div id="output"></div>
+    <!-- 準備加入最新消息Tabs -->
+    <div class="tabs">
+        <div class="tab-button-outer">
+            <ul id="tab-button">
+                <li><a href="#tab01">最新消息</a></li>
+                <li><a href="#tab02">招生資訊</a></li>
+                <!-- <li><a href="#tab03">Tab 3</a></li>
+                    <li><a href="#tab04">Tab 4</a></li>
+                    <li><a href="#tab05">Tab 5</a></li> -->
+            </ul>
+        </div>
+        <div id="tab01" class="tab-contents">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    申請轉班注意事項
+                </li>
+                <li class="list-group-item">
+                    11月份餐點表
+                </li>
+                <li class="list-group-item">
+                    萬聖節活動開跑囉
+                </li>
+            </ul>
+        </div>
+        <div id="tab02" class="tab-contents">
+            <div id="tab02listgroup" class="list-group">
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
