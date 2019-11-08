@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,39 +12,87 @@
     <link rel="shortcut icon" href="#">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/mycss.css">
-    <link rel="stylesheet" type="text/css" href="css/page.css">
+    <link rel="stylesheet" type="text/css" href="css/page2.css">
+    <link rel="stylesheet" type="text/css" href="css/hover.css">
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
     <!-- js -->
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="vendor/slick/slick.min.js"></script>
 
     <style>
-        .navbar-nav {
-            flex-direction: column;
+        .pic_01 {
+            display: block;
+            height: 90vh;
+            background-image: url(images/banner/1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .pic_02 {
+            display: block;
+            height: 90vh;
+            background-image: url(images/banner/2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .pic_03 {
+            display: block;
+            height: 90vh;
+            background-image: url(images/banner/3.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .hvr-bob {
+            display: flex;
+        }
+
+        .slick-dots {
+            bottom: 25px;
+        }
+
+        .slick-dotted.slick-slider {
+            margin-bottom: 0;
         }
     </style>
+    <script>
+        $(function () {
+            $('.myslick').slick({
+                autoplay: true,
+                dots: true,
+                infinite: false,
+                autoplaySpeed: 5000
+            });
+
+            $('#liying').click(function () {
+                window.location.href = "https://www.google.com.tw";
+            });
+            $('#buckley').click(function () {
+                window.location.href = "https://www.google.com.tw";
+            });
+
+
+        });
+    </script>
 </head>
+
 <body>
     <!-- header -->
-    <!-- .navbar-expand-{sm|md|lg|xl}決定在哪個斷點以上就出現漢堡式選單 -->
-    <!-- navbar-dark 文字顏色 .bg-dark 背景顏色 -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-
-        <!-- .navbar-brand 左上LOGO位置 -->
         <a class="navbar-brand" href="index.html">
             <!--<img src="images/H-logo.svg" width="30" height="30" class="d-inline-block align-top" alt="">-->
-            <span class="brand-title">立盈幼兒園 / 柏克來語文短期補習班</span>
+            <div class="brand-title">立盈幼兒園<br />柏克來語文短期補習班</div>
+
         </a>
-        <!-- .navbar-toggler 漢堡式選單按鈕 -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <!-- .navbar-toggler-icon 漢堡式選單Icon -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
-        <!-- .collapse.navbar-collapse 用於外層中斷點群組和隱藏導覽列內容 -->
-        <!-- 選單項目&漢堡式折疊選單 -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <!-- active表示當前頁面 -->
                 <li class="nav-item">
                     <a class="nav-link" href="#">回首頁<span class="sr-only">(current)</span></a>
                 </li>
@@ -55,35 +104,101 @@
                 </li>
             </ul>
 
-            <button class="btn btn-outline-success my-2 my-sm-0" data-toggle="modal" data-target="#myModal" type="submit">
+            <button class="btn btn-outline-success my-2 my-sm-0" data-toggle="modal" data-target="#myModal"
+                type="submit">
                 聯絡我們
             </button>
         </div>
 
     </nav>
 
-
     <!-- body -->
     <div class="dumpimg1" style="height: 2000px;">
+        <div class="flex-container1">
+            <div id="liying" class="flex-item1 entrance-1 hvr-bob">
+                <div class="entrance-text">立盈幼兒園</div>
+            </div>
+            <div id="buckley" class="flex-item1 entrance-2 hvr-bob">
+                <div class="entrance-text">柏克來<br />語文短期<br />補習班</div>
+            </div>
+        </div>
+
+        <div class="myslick">
+            <div class="pic_01"></div>
+            <div class="pic_02"></div>
+            <div class="pic_03">
+
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-4 about_us">
+                <div class="about_us_title">關於我們 ABOUT US</div>
+                <div class="about_us_article color-orange1 div_radius25">
+                    <pre>
+民國87年於豐原成功路，成立第一家全美語幼兒學校，創校之第二年即以卓越的口碑聞名於台中縣市，繼而模仿抄襲者，如雨後春筍般林立。
+
+雖如此，本校依然屹立不搖且戰戰兢兢於教學，更擴充了新校區。民國92年7月，因感謝豐原區家長們的熱烈支持及迴響，投下鉅資（約3500萬）於陽明街擴建新校區，冀望以更崇高的教育理念，優異的學習環境及現代化的設備，培養出更優質的人才。因此，除了普及英語及其他教學領域外，更增設了幼兒半日美語班，國小一、二年級全美、雙語安親班及國小時段班等，此教育理念在豐原區又開啓了新紀元。
+
+至今在豐原已用心、專精的經營了11年，在此，很欣慰每踏出的一腳步，都是嶄新和創新的一頁，足以給同業效倣，同時也感恩家長們的支持與愛護，柏克來、立盈才有此動力不斷的創舉、進步，衷心的期許全校教職員工，都能以愛心、細心、專業、敬業的精神及態度，培育孩子們美好的未來，最後誠摯的邀請您來發現我們，為您的寶貝選擇一個歡樂的童年！跨出童年的第一步就從柏克來、立盈開始～
+
+柏克來、立盈
+執行長 何邑萱 敬上</pre>
+                </div>
+            </div>
+            <div class="col-8 news setbg2">
+                <div class="flex-container">
+                    <div class="news_title">最新消息 NEWS</div>
+                    <div class="btn-more">More</div>
+                </div>
+
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#home">全部訊息</a></li>
+                    <li><a data-toggle="tab" href="#menu1">招生資訊</a></li>
+                    <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div id="home" class="tab-pane fade in active">
+                        <h3>HOME</h3>
+                        <p>Some content.</p>
+                    </div>
+                    <div id="menu1" class="tab-pane fade">
+                        <h3>Menu 1</h3>
+                        <p>Some content in menu 1.</p>
+                    </div>
+                    <div id="menu2" class="tab-pane fade">
+                        <h3>Menu 2</h3>
+                        <p>Some content in menu 2.</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6"></div>
+                    <div class="col-6"></div>
+                </div>
+            </div>
+        </div>
 
     </div>
 
     <!-- footer -->
-    <footer class="footer bg-light fixed-bottom footer-height">
-        <div class="text-muted text-center">&copy;臺中私立立盈幼兒園 ALL RIGHTS RESERVED.</div>
+    <footer class="footer bg-light fixed-bottom footer-height text-muted text-center">
+        <span>
+            &copy;臺中私立立盈幼兒園 ALL RIGHTS RESERVED. | 電話：(04) 2526-3269 | 地址：臺中市豐原區陽明街178號
+        </span>
+        <a class="footer-icon" href="https://goo.gl/maps/oodaGgGr4cVt8mEU9" target="_blank"></a>
     </footer>
 
     <!-- Contact me -->
     <div class="modal fade" id="myModal">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-                <!-- Modal Header -->
                 <div class="modal-header">
                     <h4 class="modal-title">聯絡我們 Contact us</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
-
-                <!-- Modal body -->
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-lg-6 col-sm-12">
@@ -108,8 +223,7 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                連絡電話<br />
-                                                Contact number
+                                                連絡電話<br /> Contact number
                                             </td>
                                             <td>
                                                 <input class="w-100" type="text" name="name" placeholder="" />
@@ -117,11 +231,11 @@
                                         </tr>
                                         <tr>
                                             <td style="vertical-align: middle;">
-                                                留言<br />
-                                                Message
+                                                留言<br /> Message
                                             </td>
                                             <td>
-                                                <textarea class="w-100" type="text" name="Message" placeholder="請留下想說的話" style="height: 300px;"></textarea>
+                                                <textarea class="w-100" type="text" name="Message" placeholder="請留下想說的話"
+                                                    style="height: 300px;"></textarea>
                                             </td>
                                         </tr>
                                     </table>
@@ -130,16 +244,16 @@
                         </div>
                         <div class="col-lg-6 col-sm-12">
                             <h3>立盈幼兒園 / 柏克來語文短期補習班</h3>
-                            電話：(04) 2526-3269<br />
-                            地址：臺中市豐原區陽明街178號<br />
+                            電話：(04) 2526-3269<br /> 地址：臺中市豐原區陽明街178號
                             <br />
-                            <iframe id="googlemap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3637.8945725395347!2d120.7211323153687!3d24.245465875599304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34691a04b2ff8ecb%3A0x1f0eb5a7d0efe659!2z56uL55uI5bm85YWS5ZyS!5e0!3m2!1szh-TW!2stw!4v1571904361357!5m2!1szh-TW!2stw"
-                                    frameborder="0" style="border:0; width: 100%; height: 500px;" allowfullscreen="1"></iframe>
+                            <br />
+                            <iframe id="googlemap"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3637.8945725395347!2d120.7211323153687!3d24.245465875599304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34691a04b2ff8ecb%3A0x1f0eb5a7d0efe659!2z56uL55uI5bm85YWS5ZyS!5e0!3m2!1szh-TW!2stw!4v1571904361357!5m2!1szh-TW!2stw"
+                                frameborder="0" style="border:0; width: 100%; height: 500px;"
+                                allowfullscreen="1"></iframe>
                         </div>
                     </div>
                 </div>
-
-                <!-- Modal footer -->
                 <div class="modal-footer">
                     <div class="text-center">
                         <input type="submit" value="送出" class="btn btn-success">
@@ -150,4 +264,5 @@
         </div>
     </div>
 </body>
+
 </html>

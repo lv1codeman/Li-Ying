@@ -1,5 +1,6 @@
 @import "MediaQueries.css";
 @import "Fonts.css";
+@import "util.css";
 html,
 body {
     font-family: 'GenJyuuGothic-Monospace-Regular';
@@ -29,8 +30,9 @@ pre {
     height: 500px;
 }
 
-.about_us {
-    background-color: #fcba03;
+.about_us,
+.news {
+    padding: 0px 25px 0px 45px;
 }
 
 .about_us_title {
@@ -47,7 +49,14 @@ pre {
     text-justify: inter-ideograph;
 }
 
-.flex-container {
+.news_title {
+    font-family: 'GenJyuuGothic-Monospace-Regular';
+    font-size: 2rem;
+    text-align: left;
+    padding: 20px 20px 20px 0;
+}
+
+.flex-container1 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -57,7 +66,7 @@ pre {
     z-index: 20;
 }
 
-.flex-item {
+.flex-item1 {
     flex: 1 auto;
 }
 
@@ -122,7 +131,7 @@ pre {
 /* #region Media Queries */
 
 @media only screen and (min-width: 1920px) {
-    .flex-container {
+    .flex-container1 {
         margin: auto 200px;
     }
     .entrance {
@@ -149,7 +158,7 @@ pre {
 }
 
 @media screen and (min-width: 1401px) and (max-width: 1919px) {
-    .flex-container {
+    .flex-container1 {
         margin: 0 0;
     }
     .entrance {
@@ -164,7 +173,7 @@ pre {
 }
 
 @media screen and (min-width: 735px) and (max-width: 1400px) {
-    .flex-container {
+    .flex-container1 {
         margin: 0 0;
     }
     .entrance {
@@ -179,7 +188,7 @@ pre {
 }
 
 @media screen and (min-width: 416px) and (max-width: 734px) {
-    .flex-container {
+    .flex-container1 {
         margin: 0 0;
     }
     .entrance {
@@ -194,7 +203,7 @@ pre {
 }
 
 @media only screen and (max-width: 415px) {
-    .flex-container {
+    .flex-container1 {
         margin: 0 0;
     }
     .entrance {

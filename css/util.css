@@ -1,0 +1,46 @@
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.color-orange1 {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f9f570+-1,fd9e21+0,f9f570+0,f9f570+20,f9f570+20,fd9e21+100 */
+    background: #f9f570;
+    /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, #f9f570 -1%, #fd9e21 0%, #f9f570 0%, #f9f570 20%, #f9f570 20%, #fd9e21 100%);
+    /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, #f9f570 -1%, #fd9e21 0%, #f9f570 0%, #f9f570 20%, #f9f570 20%, #fd9e21 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, #f9f570 -1%, #fd9e21 0%, #f9f570 0%, #f9f570 20%, #f9f570 20%, #fd9e21 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f9f570', endColorstr='#fd9e21', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+}
+
+.div_radius25 {
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+}
+
+.btn-more {
+    background: #f9cb9c;
+    background: linear-gradient(#f9cb9c, #e75d30);
+    border: 1px solid #b45f06;
+    border-radius: 1000px;
+    box-shadow: 0 1px #000000;
+    padding: 3px 18px;
+    color: #ffffff;
+    display: inline-block;
+    font: normal normal 1.5rem "Zenhei", sans-serif;
+    text-align: center;
+    text-shadow: 1px 1px #000000;
+}
+
+.inline {
+    display: inline;
+    vertical-align: middle;
+}
