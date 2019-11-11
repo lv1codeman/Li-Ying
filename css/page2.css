@@ -7,8 +7,14 @@ body {
   height: 100%;
 }
 
+.body_container {
+  background-image: url(../images/dumpimg/1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .row {
-  margin-top: 1rem;
+  padding: 2rem 0 3rem 0;
 }
 
 .centerall {
