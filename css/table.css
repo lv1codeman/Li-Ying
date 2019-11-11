@@ -6,7 +6,7 @@ em {
   font-style: italic;
 }
 
-table {
+.mytable {
   /* border-collapse: separate; */
   border-collapse: collapse;
   font-size: 1.2rem;
@@ -16,7 +16,7 @@ table {
   width: 100%;
 }
 
-th {
+.mytable th {
   /* background: linear-gradient(#777, #444); */
   /* border-left: 1px solid #555;
     border-right: 1px solid #777;
@@ -32,7 +32,7 @@ th {
   /* text-shadow: 0 1px 0 #000; */
 }
 
-th:after {
+.mytable th:after {
   background: linear-gradient(
     rgba(255, 255, 255, 0),
     rgba(255, 255, 255, 0.08)
@@ -47,19 +47,19 @@ th:after {
   width: 100%;
 }
 
-th:first-child {
+.mytable th:first-child {
   border-radius: 25px 0px 0px 0px;
   -webkit-border-radius: 25px 0px 0px 0px;
   -moz-border-radius: 25px 0px 0px 0px;
 }
 
-th:last-child {
+.mytable th:last-child {
   border-radius: 0px 25px 0px 0px;
   -webkit-border-radius: 0px 25px 0px 0px;
   -moz-border-radius: 0px 25px 0px 0px;
 }
 
-td {
+.mytable td {
   /* border-right: 1px solid #fff; */
   /* border-left: 1px solid #e8e8e8; */
   /* border-top: 1px solid #fff; */
@@ -69,47 +69,43 @@ td {
   transition: all 300ms;
 }
 
-td:first-child {
+.mytable td:first-child {
   box-shadow: inset 1px 0 0 #fff;
 }
 
-td:last-child {
+.mytable td:last-child {
   /* border-right: 1px solid #e8e8e8; */
   box-shadow: inset -1px 0 0 #fff;
 }
 
-tr:hover {
+.mytable tr:hover {
   cursor: pointer;
 }
 
-tr:nth-child(even) td {
+.mytable tr:nth-child(even) td {
   background: rgba(245, 200, 140, 0.5);
 }
 
-tr:last-of-type td {
-  /* box-shadow: inset 0 -1px 0 #fff; */
-}
-
-tr:last-of-type td:first-child {
+.mytable tr:last-of-type td:first-child {
   /* box-shadow: inset 1px -1px 0 #fff; */
   border-radius: 0px 0px 0px 25px;
   -webkit-border-radius: 0px 0px 0px 25px;
   -moz-border-radius: 0px 0px 0px 25px;
 }
 
-tr:last-of-type td:last-child {
+.mytable tr:last-of-type td:last-child {
   /* box-shadow: inset -1px -1px 0 #fff; */
   border-radius: 0px 0px 25px 0px;
   -webkit-border-radius: 0px 0px 25px 0px;
   -moz-border-radius: 0px 0px 25px 0px;
 }
 
-tbody:hover td {
+.mytable tbody:hover td {
   color: transparent;
   text-shadow: 0 0 3px #aaa;
 }
 
-tbody:hover tr:hover td {
+.mytable tbody:hover tr:hover td {
   color: #444;
   text-shadow: 0 1px 0 #fff;
 }

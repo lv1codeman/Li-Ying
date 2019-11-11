@@ -72,8 +72,8 @@ pre {
   flex-direction: row;
   flex-wrap: wrap;
   position: absolute;
-  bottom: 5%;
-  left: 5%;
+  bottom: 10%;
+  right: 5%;
   z-index: 20;
 }
 
@@ -81,8 +81,8 @@ pre {
   flex: 1 auto;
 }
 
-.entrance-text {
-  font-size: 1.5rem;
+.entrance_text {
+  font-size: 1.7rem;
   text-align: center;
   vertical-align: middle;
 }
@@ -91,7 +91,7 @@ pre {
   display: flex;
   width: 200px;
   height: 200px;
-  margin-right: 40px;
+  margin-right: 70px;
   justify-content: center;
   align-items: center;
   background: url(../images/icon-bg/circle.png);
