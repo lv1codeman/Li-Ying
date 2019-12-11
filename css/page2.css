@@ -118,7 +118,7 @@ pre {
   margin-right: 70px;
   justify-content: center;
   align-items: center;
-  background: url(../images/logo1.png);
+  background: url(../images/logo1.PNG);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 200px 250px;
@@ -135,7 +135,7 @@ pre {
   justify-content: center;
   align-items: center;
   /* background: url(../images/icon-bg/circle.png); */
-  background: url(../images/logo2.png);
+  background: url(../images/logo2.PNG);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 200px 250px;
