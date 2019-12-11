@@ -12,7 +12,9 @@
     <link rel="shortcut icon" href="#">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/mycss.css">
-    <link rel="stylesheet" type="text/css" href="css/page.css">
+    <link rel="stylesheet" type="text/css" href="css/page2.css">
+    <link rel="stylesheet" type="text/css" href="css/hover.css">
+    <link rel="stylesheet" type="text/css" href="css/table.css">
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
     <!-- js -->
@@ -23,55 +25,105 @@
     <style>
         .pic_01 {
             display: block;
-            height: 50vh;
-            background-image: url(images/dumpimg/3.jpg);
+            height: 90vh;
+            background-image: url(images/banner/01reverse.jpg);
             background-repeat: no-repeat;
             background-size: cover;
         }
-        
+
         .pic_02 {
             display: block;
-            height: 50vh;
-            background-image: url(images/dumpimg/4.jpg);
+            height: 90vh;
+            background-image: url(images/banner/02.jpg);
             background-repeat: no-repeat;
             background-size: cover;
         }
-        
+
         .pic_03 {
             display: block;
-            height: 50vh;
-            background-image: url(images/dumpimg/5.jpg);
+            height: 90vh;
+            background-image: url(images/banner/04.jpg);
             background-repeat: no-repeat;
             background-size: cover;
+        }
+
+        .hvr-bob {
+            display: flex;
+        }
+
+        .slick-dots {
+            bottom: 25px;
+        }
+
+        .slick-dotted.slick-slider {
+            margin-bottom: 0;
         }
     </style>
     <script>
-        $(document).ready(function() {
+        $(function () {
             $('.myslick').slick({
                 autoplay: true,
                 dots: true,
                 infinite: false,
                 autoplaySpeed: 5000
             });
+
+            $('#liying').click(function () {
+                window.location.href = "https://www.google.com.tw";
+            });
+            $('#buckley').click(function () {
+                window.location.href = "https://www.google.com.tw";
+            });
+
+            //tab function
+            var $tabButtonItem = $('#tab-button li'),
+                $tabSelect = $('#tab-select'),
+                $tabContents = $('.tab-contents'),
+                activeClass = 'is-active';
+
+            $tabButtonItem.first().addClass(activeClass);
+            $tabContents.not(':first').hide();
+
+            $tabButtonItem.find('a').on('click', function (e) {
+                var target = $(this).attr('href');
+
+                $tabButtonItem.removeClass(activeClass);
+                $(this).parent().addClass(activeClass);
+                $tabSelect.val(target);
+                $tabContents.hide();
+                $(target).show();
+                e.preventDefault();
+            });
+
+            $tabSelect.on('change', function () {
+                var target = $(this).val(),
+                    targetSelectNum = $(this).prop('selectedIndex');
+
+                $tabButtonItem.removeClass(activeClass);
+                $tabButtonItem.eq(targetSelectNum).addClass(activeClass);
+                $tabContents.hide();
+                $(target).show();
+            });
+
         });
     </script>
 </head>
 
 <body>
     <!-- header -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <a class="navbar-brand" href="index.html">
             <!--<img src="images/H-logo.svg" width="30" height="30" class="d-inline-block align-top" alt="">-->
             <div class="brand-title">立盈幼兒園<br />柏克來語文短期補習班</div>
-
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">回首頁<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.html">回首頁<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">預約參觀</a>
@@ -79,9 +131,13 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">我要入學</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="environment.html">環境與設施</a>
+                </li>
             </ul>
 
-            <button class="btn btn-outline-success my-2 my-sm-0" data-toggle="modal" data-target="#myModal" type="submit">
+            <button class="btn btn-outline-success my-2 my-sm-0" data-toggle="modal" data-target="#myModal"
+                type="submit">
                 聯絡我們
             </button>
         </div>
@@ -89,21 +145,9 @@
     </nav>
 
     <!-- body -->
-    <div class="dumpimg1" style="height: 2000px;">
-        <div class="flex-container">
-            <div class="flex-item entrance setborder">
-                <div>立盈幼兒園</div>
-            </div>
-            <div class="flex-item entrance">
-                <div>柏克來語文短期補習班</div>
-            </div>
-        </div>
+    <div class="body_container setbg1">
 
-        <div class="myslick">
-            <div class="pic_01">your content</div>
-            <div class="pic_02">your content</div>
-            <div class="pic_03">your content</div>
-        </div>
+
 
     </div>
 
@@ -112,78 +156,84 @@
         <span>
             &copy;臺中私立立盈幼兒園 ALL RIGHTS RESERVED. | 電話：(04) 2526-3269 | 地址：臺中市豐原區陽明街178號
         </span>
-        <a class="footer-icon1" href="https://goo.gl/maps/oodaGgGr4cVt8mEU9" target="_blank"></a>
+        <a class="footer-icon" href="https://goo.gl/maps/oodaGgGr4cVt8mEU9" target="_blank"></a>
     </footer>
 
     <!-- Contact me -->
-    <div class="modal fade" id="myModal">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">聯絡我們 Contact us</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-lg-6 col-sm-12">
-                            <form action="https://formspree.io/kellyho922@gmail.com" method="POST">
-                                <div class="table-responsive-lg">
-                                    <table class="table table-hover">
-                                        <tr>
-                                            <td style="width: 30%">
-                                                姓名 Name
-                                            </td>
-                                            <td style="width: 70%">
-                                                <input class="w-100" type="text" name="name" placeholder="" />
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                電子信箱 Email
-                                            </td>
-                                            <td>
-                                                <input class="w-100" type="text" name="name" placeholder="" />
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                連絡電話<br /> Contact number
-                                            </td>
-                                            <td>
-                                                <input class="w-100" type="text" name="name" placeholder="" />
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td style="vertical-align: middle;">
-                                                留言<br /> Message
-                                            </td>
-                                            <td>
-                                                <textarea class="w-100" type="text" name="Message" placeholder="請留下想說的話" style="height: 300px;"></textarea>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="col-lg-6 col-sm-12">
-                            <h3>立盈幼兒園 / 柏克來語文短期補習班</h3>
-                            電話：(04) 2526-3269<br /> 地址：臺中市豐原區陽明街178號
-                            <br />
-                            <br />
-                            <iframe id="googlemap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3637.8945725395347!2d120.7211323153687!3d24.245465875599304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34691a04b2ff8ecb%3A0x1f0eb5a7d0efe659!2z56uL55uI5bm85YWS5ZyS!5e0!3m2!1szh-TW!2stw!4v1571904361357!5m2!1szh-TW!2stw"
-                                frameborder="0" style="border:0; width: 100%; height: 500px;" allowfullscreen="1"></iframe>
+    <!-- https://formspree.io/ -->
+    <form action="https://formspree.io/xeqodvzw" method="POST">
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">聯絡我們 Contact us</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-12">
+                                <form action="https://formspree.io/kellyho922@gmail.com" method="POST">
+                                    <div class="table-responsive-lg">
+                                        <table class="table table-hover">
+                                            <tr>
+                                                <td style="width: 30%">
+                                                    姓名 Name
+                                                </td>
+                                                <td style="width: 70%">
+                                                    <input class="w-100" type="text" name="Name" placeholder="" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    電子信箱 Email
+                                                </td>
+                                                <td>
+                                                    <input class="w-100" type="email" name="Email" placeholder="" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    連絡電話<br /> Contact number
+                                                </td>
+                                                <td>
+                                                    <input class="w-100" type="text" name="Phone" placeholder="" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="vertical-align: middle;">
+                                                    留言<br /> Message
+                                                </td>
+                                                <td>
+                                                    <textarea class="w-100" type="text" name="Message"
+                                                        placeholder="請留下想說的話" style="height: 300px;"></textarea>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-lg-6 col-sm-12">
+                                <h3>立盈幼兒園 / 柏克來語文短期補習班</h3>
+                                電話：(04) 2526-3269<br /> 地址：臺中市豐原區陽明街178號
+                                <br />
+                                <br />
+                                <iframe id="googlemap"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3637.8945725395347!2d120.7211323153687!3d24.245465875599304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34691a04b2ff8ecb%3A0x1f0eb5a7d0efe659!2z56uL55uI5bm85YWS5ZyS!5e0!3m2!1szh-TW!2stw!4v1571904361357!5m2!1szh-TW!2stw"
+                                    frameborder="0" style="border:0; width: 100%; height: 500px;"
+                                    allowfullscreen="1"></iframe>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <div class="text-center">
-                        <input type="submit" value="送出" class="btn btn-success">
-                        <button type="button" class="btn btn-light" data-dismiss="modal">關閉</button>
+                    <div class="modal-footer">
+                        <div class="text-center">
+                            <input type="submit" value="送出" class="btn btn-success">
+                            <button type="button" class="btn btn-light" data-dismiss="modal">關閉</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </form>
 </body>
 
 </html>

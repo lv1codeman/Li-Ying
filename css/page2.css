@@ -5,12 +5,22 @@ html,
 body {
   font-family: "GenJyuuGothic-Monospace-Regular";
   height: 100%;
+  font-size: 1rem;
 }
-
+.navbar {
+  padding: 0 1rem;
+}
+.nav-link {
+  font-size: 1.15rem;
+}
+.navbar-brand {
+  font-size: 1.4rem;
+}
 .body_container {
   background-image: url(../images/dumpimg/1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  padding-top: 70px; /*navbar default height*/
 }
 
 .row {
@@ -27,9 +37,17 @@ body {
 
 .setbg1 {
   background-color: #fcba03;
-  height: 500px;
+  height: 1000px;
 }
 
+.page_title {
+  padding: 30px 10px 10px 10px;
+  font-size: 3rem;
+  text-align: center;
+}
+.page_content {
+  padding: 30px 10px 10px 10px;
+}
 pre {
   font-family: "GenJyuuGothic-Monospace-Regular";
   white-space: pre-wrap;
@@ -38,6 +56,12 @@ pre {
 .setbg2 {
   background-color: #4ba1db;
   height: 500px;
+}
+
+.bg_white {
+  background-color: #ffffff;
+  height: 500px;
+  width: 80%;
 }
 
 .about_us,
@@ -202,8 +226,12 @@ pre {
   padding: 0.5em 2em 1em;
 }
 
-/* #region Media Queries */
+.modal-dialog {
+  max-width: 70vw;
+}
 
+/* #region Media Queries */
+/* 
 @media only screen and (min-width: 1920px) {
   .flex-container1 {
     margin: auto 200px;
@@ -215,7 +243,7 @@ pre {
     background-size: 300px 300px;
   }
   .brand-title {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     margin-left: 0.25rem !important;
     margin-right: 0.25rem !important;
     font-weight: 500;
@@ -223,7 +251,7 @@ pre {
   }
   .nav-link {
     line-height: 60px;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 500;
   }
   .modal-dialog {
@@ -266,7 +294,7 @@ pre {
     margin: 0 0;
   }
   .entrance {
-    /* margin: 100px 20px 50px 20px; */
+    
     width: 300px;
     height: 300px;
     background-size: 300px 300px;
@@ -301,6 +329,6 @@ pre {
   .modal-dialog {
     max-width: 80vw;
   }
-}
+} */
 
 /* #endregion */
