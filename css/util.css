@@ -1,3 +1,25 @@
+.border1 {
+  border: 1px solid red;
+}
+.border2 {
+  border: 1px solid green;
+}
+.alignLeft {
+  text-align: left;
+}
+
+.alignCenter {
+  text-align: center;
+}
+
+.alignRight {
+  text-align: right;
+}
+
+.item_verticalcenter {
+  align-items: center;
+}
+
 .flex-container {
   display: flex;
   flex-direction: row;
@@ -94,6 +116,35 @@
     #ea995b 100%
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5b082', endColorstr='#ea995b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.bg2 {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fefcea+0,f7e89c+0,f7e89c+58,fefcea+100 */
+  background: #fefcea; /* Old browsers */
+  background: -moz-radial-gradient(
+    center,
+    ellipse cover,
+    #fefcea 0%,
+    #f7e89c 0%,
+    #f7e89c 58%,
+    #fefcea 100%
+  ); /* FF3.6-15 */
+  background: -webkit-radial-gradient(
+    center,
+    ellipse cover,
+    #fefcea 0%,
+    #f7e89c 0%,
+    #f7e89c 58%,
+    #fefcea 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(
+    ellipse at center,
+    #fefcea 0%,
+    #f7e89c 0%,
+    #f7e89c 58%,
+    #fefcea 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#fefcea',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 .div_radius25 {

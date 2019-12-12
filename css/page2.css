@@ -164,11 +164,6 @@ pre {
 }
 
 /* tab funciton */
-.tabs {
-  /* max-width: 640px; */
-  /* margin: 0 auto;
-    padding: 0 20px; */
-}
 
 #tab-button {
   display: table;
@@ -228,6 +223,15 @@ pre {
 
 .modal-dialog {
   max-width: 70vw;
+}
+
+.reservation {
+  text-align: center;
+  padding: 100px 100px;
+  margin: 0 100px;
+}
+.form-bg {
+  padding: 50px 50px;
 }
 
 /* #region Media Queries */

@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/mycss.css">
     <link rel="stylesheet" type="text/css" href="css/page2.css">
+    <link rel="stylesheet" type="text/css" href="css/util.css">
     <link rel="stylesheet" type="text/css" href="vendor/bootstrap-datepicker-1.9.0-dist/css/bootstrap-datepicker.css">
 
     <!-- js -->
@@ -29,93 +30,6 @@
     <style>
         .navbar-nav {
             flex-direction: column;
-        }
-
-        .form-container {
-            width: 80%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .form-container * {
-            box-sizing: border-box;
-        }
-
-        .flex-outer,
-        .flex-inner {
-            list-style-type: none;
-            padding: 0;
-            align-items: center;
-        }
-
-        .flex-outer {
-            max-width: 800px;
-            margin: 0 auto;
-
-        }
-
-        .flex-outer li,
-        .flex-inner {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-
-        .flex-inner {
-            padding: 0 8px;
-            justify-content: space-between;
-        }
-
-        .flex-outer>li:not(:last-child) {
-            margin-bottom: 20px;
-        }
-
-        .flex-outer li label,
-        .flex-outer li p {
-            padding: 8px;
-            font-weight: 300;
-            letter-spacing: .09em;
-            text-transform: uppercase;
-        }
-
-        .flex-outer>li>label,
-        .flex-outer li p {
-            flex: 1 0 120px;
-            max-width: 220px;
-        }
-
-        .flex-outer>li>label+*,
-        .flex-inner {
-            flex: 1 0 220px;
-        }
-
-        .flex-outer li p {
-            margin: 0;
-        }
-
-        .flex-outer li input:not([type='checkbox']),
-        .flex-outer li textarea {
-            padding: 15px;
-            border: none;
-        }
-
-        .flex-outer li button {
-            margin-left: auto;
-            padding: 8px 16px;
-            border: none;
-            background: #333;
-            color: #f2f2f2;
-            text-transform: uppercase;
-            letter-spacing: .09em;
-            border-radius: 2px;
-        }
-
-        .flex-inner li {
-            width: 100px;
-        }
-
-        label {
-            margin-bottom: 0;
         }
     </style>
     <script>
@@ -165,67 +79,62 @@
     </nav>
 
     <!-- body -->
-    <div class="dumpimg1" style="height: 1800px;">
+    <div class="dumpimg1" style="height: 800px;">
+
+
+
         <div class="form-bg">
-            <div class="form-container">
-                <form action="https://formspree.io/xeqodvzw" method="POST" class="reservation bg2 div_radius25">
-                    <ul class="flex-outer">
-                        <li>
-                            <label for="first-name">First Name</label>
-                            <input type="text" class="form-control" id="first-name"
-                                placeholder="Enter your first name here">
-                        </li>
-                        <li>
-                            <label for="last-name">Last Name</label>
-                            <input type="text" id="last-name" placeholder="Enter your last name here">
-                        </li>
-                        <li>
-                            <label for="email">Email</label>
-                            <input type="email" id="email" placeholder="Enter your email here">
-                        </li>
-                        <li>
-                            <label for="phone">Phone</label>
-                            <input type="tel" id="phone" placeholder="Enter your phone here">
-                        </li>
-                        <li>
-                            <label for="message">Message</label>
-                            <textarea rows="6" id="message" placeholder="Enter your message here"></textarea>
-                        </li>
-                        <li>
-                            <p>Age</p>
-                            <ul class="flex-inner">
-                                <li>
-                                    <input type="checkbox" id="twenty-to-twentynine">
-                                    <label for="twenty-to-twentynine">20-29</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" id="thirty-to-thirtynine">
-                                    <label for="thirty-to-thirtynine">30-39</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" id="fourty-to-fourtynine">
-                                    <label for="fourty-to-fourtynine">40-49</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" id="fifty-to-fiftynine">
-                                    <label for="fifty-to-fiftynine">50-59</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" id="sixty-to-sixtynine">
-                                    <label for="sixty-to-sixtynine">60-69</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" id="other">
-                                    <label for="other">Other</label>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <button type="submit">Submit</button>
-                        </li>
-                    </ul>
-                </form>
-            </div>
+            <form action="https://formspree.io/xeqodvzw" method="POST" class="reservation bg2 div_radius25">
+
+                <div class="form-row item_verticalcenter">
+                    <div class="col-lg-2 alignLeft">
+                        孩童姓名
+                    </div>
+                    <div class="col-lg-4">
+                        <input type="text" class="form-control" placeholder="" name="childname">
+                    </div>
+                    <div class="col-lg-2 alignLeft">
+                        出生日期
+                    </div>
+                    <div class="col-lg-4">
+                        <input id="birthday" type="text" class="form-control datepicker" name="brithday"
+                            data-provide="datepicker" data-date-format="yyyy/mm/dd" placeholder="1987/01/31"
+                            style="text-align: center;">
+                    </div>
+                </div>
+                <div class="form-row item_verticalcenter">
+                    <div class="col-lg-2 alignRight">
+                        預計入學學年
+                    </div>
+                    <div class="col-lg-4">
+                        <input type="text" class="form-control" placeholder="" name="childname">
+                    </div>
+                    <div class="col-lg-2 alignRight">
+                        預計入學班級
+                    </div>
+                    <div class="col-lg-4">
+                        <input id="birthday" type="text" class="form-control datepicker" name="brithday"
+                            data-provide="datepicker" data-date-format="yyyy/mm/dd" placeholder="1987/01/31"
+                            style="text-align: center;">
+                    </div>
+                </div>
+                <div class="form-row item_verticalcenter">
+                    <div class="col-lg-2 alignRight">
+                        母親姓名
+                    </div>
+                    <div class="col-lg-4">
+                        <input type="text" class="form-control" placeholder="" name="childname">
+                    </div>
+                    <div class="col-lg-2 alignRight">
+                        父親姓名
+                    </div>
+                    <div class="col-lg-4">
+                        <input id="birthday" type="text" class="form-control datepicker" name="brithday"
+                            data-provide="datepicker" data-date-format="yyyy/mm/dd" placeholder="1987/01/31"
+                            style="text-align: center;">
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 
