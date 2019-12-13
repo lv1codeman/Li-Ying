@@ -29,22 +29,33 @@
 
 
     <style>
-        /* .main-content {
-            padding: 20px;
-        } */
+        html,
+        body {
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-        /* @media (max-width: 768px) {
+        textarea {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .main-content {
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
             .main-content {
                 padding: 20px 8px;
             }
-        } */
+        }
 
 
         /* form specific formatting */
         .form-group {
             display: flex;
             flex-direction: row;
-            align-items: center;
         }
 
         .form-group label {
@@ -171,49 +182,33 @@
                 <form action="https://formspree.io/xeqodvzw" method="POST" class="reservation bg3 div_radius25">
                     <article class="main-content">
                         <div class="form-group">
-                            <label>孩童姓名</label>
-                            <input type="text" class="form-control" placeholder="" name="childname">
+                            <label>First Name</label>
+                            <input value="Rick" class="input-control" />
 
-                            <label for="last-name">出生日期</label>
-                            <input id="birthday" type="text" class="form-control datepicker" name="brithday"
-                                data-provide="datepicker" data-date-format="yyyy/mm/dd" placeholder="1987/01/31"
-                                style="text-align: left;">
+                            <label class="right-inline">Last Name</label>
+                            <input value="Strahl" class="input-control" />
                         </div>
 
                         <div class="form-group">
-                            <label for="email">預計入學學年</label>
-                            <select name="cars" class="form-control">
-                                <option value="volvo">Volvo XC90</option>
-                                <option value="saab">Saab 95</option>
-                                <option value="mercedes">Mercedes SLK</option>
-                                <option value="audi">Audi TT</option>
-                            </select>
-
-                            <label for="phone">預計入學班級</label>
-                            <select name="cars" class="form-control">
-                                <option value="volvo">Volvo XC90</option>
-                                <option value="saab">Saab 95</option>
-                                <option value="mercedes">Mercedes SLK</option>
-                                <option value="audi">Audi TT</option>
-                            </select>
+                            <label>Company</label>
+                            <input value="West Wind" class="input-control" />
                         </div>
 
                         <div class="form-group">
-                            <label>父親姓名</label>
-                            <input type="text" class="form-control" placeholder="" name="childname">
-                            <label>父親姓名</label>
-                            <input type="text" class="form-control" placeholder="" name="childname">
+                            <label>Address</label>
+                            <textarea class="input-control">32 North End</textarea>
                         </div>
 
                         <div class="form-group">
-                            <label for="message">其他問題</label>
-                            <textarea rows="6" id="message" placeholder="Enter your message here"
-                                style="width: 100%;"></textarea>
+                            <label>City,State,Zip</label>
+                            <input value="Walnut Creek" class="input-control" placeholder="City" style="flex: 6" />
+                            <input value="CA" class="input-control" placeholder="State" style="flex:1" />
+                            <input value="94152" class="input-control" placeholder="Postal Code" style="flex:2" />
                         </div>
 
                         <div class="form-group">
                             <label>&nbsp;</label>
-                            <button type="submit">Submit</button>
+                            <button>Save</button>
                             <button>Cancel</button>
 
                         </div>
