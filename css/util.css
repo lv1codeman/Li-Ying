@@ -166,6 +166,9 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d29c427', endColorstr='#a0e5a2',GradientType=1 ); /* IE6-9 */
 }
 
+.bg4 {
+  background: #eaeaea;
+}
 .div_radius25 {
   border-radius: 25px;
   -webkit-border-radius: 25px;

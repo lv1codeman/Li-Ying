@@ -152,10 +152,7 @@
                     <a class="nav-link" href="environment.html">環境與設施</a>
                 </li>
             </ul>
-            <button class="btn btn-outline-success my-2 my-sm-0" data-toggle="modal" data-target="#myModal"
-                type="submit">
-                預約參觀
-            </button>
+
             <button class="btn btn-outline-success my-2 my-sm-0" data-toggle="modal" data-target="#myModal"
                 type="submit">
                 聯絡我們
@@ -165,13 +162,13 @@
     </nav>
 
     <!-- body -->
-    <div style="height: 1800px;">
+    <div class="dumpimg1" style="height: 1800px;">
         <div class="page_title">預約參觀</div>
 
         <!-- 控制表單與TOP的距離 -->
         <div class="form-bg">
             <div class="form-container">
-                <form action="https://formspree.io/xeqodvzw" method="POST" class="reservation bg4 div_radius25">
+                <form action="https://formspree.io/xeqodvzw" method="POST" class="reservation bg3 div_radius25">
                     <article class="main-content">
                         <div class="form-group">
                             <label>孩童姓名</label>
@@ -190,67 +187,25 @@
                         <div class="form-group">
                             <label for="email">預計入學學年</label>
                             <select name="預計入學學年" class="form-control">
-                                <option value="108學年(108年08月入學)">108學年(108年08月入學)</option>
-                                <option value="109學年(109年08月入學)">109學年(109年08月入學)</option>
-                                <option value="110學年(110年08月入學)">110學年(110年08月入學)</option>
-                                <option value="111學年(111年08月入學)">111學年(111年08月入學)</option>
+                                <option value="108學年（108年08月入學）">108學年（108年08月入學）</option>
+                                <option value="109學年（109年08月入學）">109學年（109年08月入學）</option>
+                                <option value="110學年（110年08月入學）">110學年（110年08月入學）</option>
+                                <option value="111學年（111年08月入學）">111學年（111年08月入學）</option>
                             </select>
 
                             <label for="phone">預計入學班級</label>
                             <select name="預計入學班級" class="form-control">
                                 <option selected="selected" hidden>請選擇</option>
                                 <option disabled>立盈幼兒園</option>
-                                <option value="幼幼班">幼幼班</option>
-                                <option value="小班">小班</option>
-                                <option value="中班">中班</option>
-                                <option value="大班">大班</option>
-                                <option disabled>柏克來語文短期補習班</option>
+                                <option value="幼幼班">- 幼幼班</option>
+                                <option value="小班">- 小班</option>
+                                <option value="中班">- 中班</option>
+                                <option value="大班">- 大班</option>
+                                <option disabled>立盈幼兒園</option>
                                 <option value="先修班">- 先修班</option>
-                                <option value="美語資優班1-2年級">美語資優班1-2年級</option>
-                                <option value="美語資優班3-6年級">美語資優班3-6年級</option>
-                                <option disabled>──────────</option>
-                                <option value="尚未決定">尚未決定</option>
+                                <option value="美語資優班1-2年級">- 美語資優班1-2年級</option>
+                                <option value="美語資優班3-6年級">- 美語資優班3-6年級</option>
                             </select>
-                        </div>
-                        <div class="form-group">
-                            <label>預約參觀日期</label>
-                            <input name="預約參觀日期" type="text" class="form-control datepicker1" data-provide="datepicker"
-                                data-date-format="yyyy/mm/dd" placeholder="1987/01/31" style="text-align: left;">
-                            <label>預約時段</label>
-                            <select name="預約時段" class="form-control">
-                                <option value="上午09:30 - 10:30">上午09:30 - 10:30</option>
-                                <option value="上午10:30 - 11:30">上午10:30 - 11:30</option>
-                                <option value="下午14:10 - 15:00">下午14:10 - 15:00</option>
-                                <option value="下午15:00 - 15:45">下午15:00 - 15:45</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>參觀人數</label>
-                            <label>大人</label>
-                            <select name="大人人數" class="form-control">
-                                <option selected="selected" hidden>請選擇</option>
-                                <option value="0">0</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                            </select>
-                            位
-                            <label>小孩</label>
-                            <select name="小孩人數" class="form-control">
-                                <option selected="selected" hidden>請選擇</option>
-                                <option value="0">0</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                            </select>
-                            位
-
                         </div>
                         <div class="form-group">
                             <label for="message">其他問題</label>
@@ -270,15 +225,8 @@
     </div>
 
 
-
-
     <!-- footer -->
-    <footer class="footer bg-light fixed-bottom footer-height text-muted text-center">
-        <span>
-            &copy;臺中私立立盈幼兒園 ALL RIGHTS RESERVED. | 電話：(04) 2526-3269 | 地址：臺中市豐原區陽明街178號
-        </span>
-        <a class="footer-icon" href="https://goo.gl/maps/oodaGgGr4cVt8mEU9" target="_blank"></a>
-    </footer>
+
 
 
     <!-- Contact me -->
